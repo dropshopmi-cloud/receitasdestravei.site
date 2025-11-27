@@ -1,0 +1,964 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MÉTODO SEM CONSTIPAÇÃO</title>
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <script>
+    // Countdown de exemplo (se precisar em outro lugar)
+    function iniciarCountdown() {
+      let totalSegundos = 15 * 60;
+
+      const minutosEl = document.getElementById("cd-minutos");
+      const segundosEl = document.getElementById("cd-segundos");
+
+      const intervalo = setInterval(() => {
+        if (totalSegundos <= 0) {
+          clearInterval(intervalo);
+          return;
+        }
+
+        totalSegundos--;
+        const m = Math.floor(totalSegundos / 60);
+        const s = totalSegundos % 60;
+
+        if (minutosEl && segundosEl) {
+          minutosEl.textContent = m.toString().padStart(2, '0');
+          segundosEl.textContent = s.toString().padStart(2, '0');
+        }
+      }, 1000);
+    }
+
+    document.addEventListener("DOMContentLoaded", iniciarCountdown);
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    /* ========== HERO NOVO (TOPO) ========== */
+
+    .hero {
+      background:
+        radial-gradient(circle at top center, rgba(255, 60, 60, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(255, 120, 0, 0.12), transparent 50%),
+        #000;
+      padding: 40px 5% 60px; /* antes 80px 5% 70px – menos espaço em cima */
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+    }
+
+    .hero-content {
+      flex: 1;
+      max-width: 680px;
+    }
+
+    .hero-title {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin: 0 0 26px;
+    }
+
+    .hero-title span.highlight {
+      color: #ff3b1f;
+    }
+
+    .hero-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .hero-item {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .hero-item-icon {
+      width: 32px;
+      height: 32px;
+      border: 2px solid #ff3b1f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .hero-item-icon span {
+      color: #ff3b1f;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .hero .btn {
+      margin-top: 10px;
+      background: linear-gradient(90deg, #ff4d1c, #ff2d1c);
+      color: white;
+      font-weight: 700;
+      border: none;
+      padding: 16px 42px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      display: inline-block;
+      
+    }
+    /* HOVER VERDE PARA O PRIMEIRO BOTÃO */
+.hero .btn {
+  transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.hero .btn:hover {
+  background: linear-gradient(90deg, #01a009, #01a009); /* verde */
+  box-shadow: 0 0 18px rgba(23, 194, 94, 0.85);
+  transform: translateY(-1px);
+}
+
+
+    .hero-image {
+      flex: 0 0 40%;
+      max-width: 480px; /* logo maior no desktop */
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ========== BARRINHA LARANJA ROLANDO (ETAPA 2) ========== */
+
+    .top-ticker {
+      width: 100%;
+      background: #ff3b1f;
+      color: #fff;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .top-ticker-inner {
+      display: inline-flex;
+      gap: 80px;
+      padding: 10px 40px;
+      font-weight: 600;
+      font-size: 14px;
+      animation: ticker-move 50s linear infinite;
+    }
+
+    .top-ticker-inner span {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @keyframes ticker-move {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ========== SEÇÃO 3 – TRÊS PILARES ========== */
+
+    .step3 {
+      position: relative;
+        padding: 80px 5% 40px;  /* antes 100px */
+      text-align: center;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.92)),
+        url("images/DOBRA-3-1-3-scaled.png");
+      background-size: cover, cover;
+      background-position: center center, center center;
+      background-repeat: no-repeat;
+    }
+
+    .step3-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .step3-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .step3-title span.highlight {
+      color: #ff3b1f;
+    }
+
+    .step3-subtitle {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.6;
+      max-width: 860px;
+      margin: 0 auto 38px;
+    }
+
+    .step3-pillars {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 40px;
+      margin-top: 20px;
+    }
+
+    .pillar {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .pillar-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 999px;
+      border: 2px solid #ff3b1f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+      font-size: 22px;
+      color: #ff3b1f;
+      font-weight: 700;
+    }
+
+    .pillar-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ff3b1f;
+      margin-bottom: 10px;
+    }
+
+    .pillar-text {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .step3 .btn {
+      margin-top: 10px;
+      background: linear-gradient(90deg, #ff4d1c, #ff2d1c);
+      color: white;
+      font-weight: 700;
+      border: none;
+      padding: 16px 30px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    /* ========== SEÇÃO 5 – CARD OFERTA ========== */
+
+    /* CARD OFERTA PRINCIPAL (cores adaptadas) */
+.offer-card--principal {
+  max-width: 820px;
+  width: 100%;
+  background: #050505;
+  border-radius: 24px;
+  padding: 32px 24px 28px;
+  box-shadow: 0 0 40px rgba(255, 59, 31, 0.8); /* brilho laranja/vermelho */
+  border: 2px solid #ff3b1f;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* botão igual ao primeiro, retangular e com hover */
+.offer-cta-btn {
+  display: inline-block;
+  padding: 16px 42px;
+  border-radius: 10px; /* retangular como o btn do hero */
+  background: linear-gradient(90deg, #ff4d1c, #ff2d1c);
+  color: #ffffff;
+  font-family: Poppins, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(255, 77, 28, 0.85);
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.offer-cta-btn:hover {
+  background: linear-gradient(90deg, #01a009, #01a009); /* verde no hover */
+  box-shadow: 0 0 18px rgba(23, 194, 94, 0.85);
+  transform: translateY(-1px);
+}
+
+
+
+    /* ========== SEÇÃO 6 – GARANTIA (SELO EMBAIXO DO TEXTO) ========== */
+
+    .step6 {
+      background: #000;
+      padding: 40px 5% 80px;
+    }
+
+    .step6-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .guarantee-content {
+      order: 1;
+      max-width: 640px;
+      text-align: center;
+    }
+
+    .guarantee-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .guarantee-title span.highlight {
+      color: #ff3b1f;
+    }
+
+    .guarantee-text {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #f5f5f5;
+      margin-bottom: 26px;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .guarantee-image {
+      order: 2;
+      flex: 0 0 auto;
+      max-width: 380px;
+      align-self: center;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .guarantee-image img {
+      width: 100%;
+      max-width: 380px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .guarantee-payments img {
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 8px;
+    }
+
+    .guarantee-payments--mobile {
+      display: none;
+    }
+
+    /* ========== SEÇÃO 7 – FAQ ========== */
+
+    .faq-section {
+      background: #000;
+      padding: 60px 5% 80px;
+      border-top: 1px solid #111;
+    }
+
+    .faq-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 32px;
+    }
+
+    .faq-list {
+      border-top: 1px solid rgba(255, 180, 60, 0.4);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(255, 180, 60, 0.4);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .faq-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .faq-icon {
+      font-size: 14px;
+      transition: transform 0.2s ease;
+      color: #ffb43c;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 0 14px 26px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: #e5e5e5;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(90deg);
+    }
+
+    /* ========== RODAPÉ ========== */
+
+    .footer {
+      background: #000;
+      border-top: 1px solid #111;
+      padding: 18px 5% 26px;
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .footer span {
+      color: #ffb43c;
+      font-weight: 500;
+    }
+
+    /* ========== RESPONSIVO ========== */
+
+    @media (max-width: 900px) {
+
+      .hero {
+        padding: 20px 20px 40px; /* menos espaço no topo no mobile também */
+      }
+
+      /* imagem do ebook primeiro e textos depois */
+      .hero-inner {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 0px;
+      }
+
+      /* puxa o bloco de texto ligeiramente pra cima */
+      .hero-content {
+        margin-top: -36px;
+      }
+
+      .hero-title {
+        font-size: 24px;
+      }
+
+      .hero-image {
+        align-self: center;
+        max-width: 360px;
+      }
+
+      .hero-image img {
+        max-width: 360px;
+      }
+
+      /* botão menor e centralizado no mobile */
+      .hero-content .btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px 28px;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .top-ticker-inner {
+        font-size: 12px;
+        padding: 8px 30px;
+      }
+
+      .step3 {
+        padding: 60px 20px 80px;
+        background-size: cover, cover;
+      }
+
+      .step3-title {
+        font-size: 22px;
+      }
+
+      .step3-subtitle {
+        font-size: 13px;
+      }
+
+      .step3-pillars {
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+      }
+
+      .pillar {
+        max-width: 320px;
+      }
+
+      .step5 {
+        padding: 40px 20px 40px;
+      }
+
+      .offer-card {
+        padding: 26px 18px 28px;
+      }
+
+      .offer-top {
+        font-size: 18px;
+      }
+
+      .offer-installments .currency {
+        font-size: 24px;
+      }
+
+      .offer-installments .value {
+        font-size: 34px;
+      }
+
+      .offer-cash {
+        font-size: 14px;
+      }
+
+      .offer-btn {
+        font-size: 15px;
+      }
+
+      .step6 {
+        padding: 40px 20px 60px;
+      }
+
+      .step6-inner {
+        align-items: center;
+        gap: 24px;
+      }
+
+      .guarantee-image {
+        max-width: 260px;
+      }
+
+      .guarantee-image img {
+        max-width: 260px;
+      }
+
+      .guarantee-title {
+        font-size: 22px;
+      }
+
+      .guarantee-text {
+        font-size: 14px;
+      }
+
+      .guarantee-payments--desktop {
+        display: none;
+      }
+
+      .guarantee-payments--mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+      }
+
+      .faq-section {
+        padding: 50px 20px 70px;
+      }
+
+      .faq-title {
+        font-size: 24px;
+      }
+
+      .faq-question {
+        font-size: 14px;
+      }
+
+      .faq-answer {
+        font-size: 13px;
+      }
+
+      .footer {
+        padding: 16px 20px 24px;
+        font-size: 11px;
+      }
+    }
+  </style>
+
+  <!-- CONTADOR 10 MINUTOS PARA O CARD DE COMPRA -->
+  <script>
+    // Inicia um contador regressivo em minutos/segundos
+    function startOfferCountdown(totalSeconds, minutesId, secondsId) {
+      var remaining = totalSeconds;
+
+      function updateTimer() {
+        var minutes = Math.floor(remaining / 60);
+        var seconds = remaining % 60;
+
+        var minEl = document.getElementById(minutesId);
+        var secEl = document.getElementById(secondsId);
+
+        if (!minEl || !secEl) return;
+
+        minEl.textContent = String(minutes).padStart(2, '0');
+        secEl.textContent = String(seconds).padStart(2, '0');
+
+        if (remaining > 0) {
+          remaining--;
+          setTimeout(updateTimer, 1000);
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', updateTimer);
+      } else {
+        updateTimer();
+      }
+    }
+  </script>
+</head>
+
+
+
+<body>
+
+  <!-- HERO NOVO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Viver com constipação está atrapalhando sua vida... e nada do que você tenta
+          <span class="highlight">parece funcionar?</span>
+        </h1>
+
+        <div class="hero-list">
+          <div class="hero-item">
+            <div class="hero-item-icon"><span>✕</span></div>
+            <div>Toma laxantes que “soltam” por um dia, mas travam ainda mais depois.</div>
+          </div>
+
+          <div class="hero-item">
+            <div class="hero-item-icon"><span>✕</span></div>
+            <div>Tenta aumentar a água e a fibra... mas continua sentindo dor, gases e barriga estufada.</div>
+          </div>
+
+          <div class="hero-item">
+            <div class="hero-item-icon"><span>✕</span></div>
+            <div>Se sente culpada por não conseguir regular o intestino, mesmo fazendo “tudo certo”.</div>
+          </div>
+        </div>
+
+        <!-- BOTÃO LEVANDO PARA O CARD DE COMPRA -->
+        <a href="#oferta" class="btn">QUERO O MÉTODO SEM CONSTIPAÇÃO</a>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/ebook-logo-livro.png" alt="Mockup do ebook Método Sem Constipação">
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRINHA LARANJA ROLANDO -->
+  <div class="top-ticker">
+    <div class="top-ticker-inner">
+      <span>MÉTODO SEM CONSTIPAÇÃO</span><span>MÉTODO SEM CONSTIPAÇÃO</span><span>MÉTODO SEM CONSTIPAÇÃO</span><span>MÉTODO SEM CONSTIPAÇÃO</span>
+      <span>MÉTODO SEM CONSTIPAÇÃO</span><span>MÉTODO SEM CONSTIPAÇÃO</span><span>MÉTODO SEM CONSTIPAÇÃO</span><span>MÉTODO SEM CONSTIPAÇÃO</span>
+      <span>MÉTODO SEM CONSTIPAÇÃO</span><span>MÉTODO SEM CONSTIPAÇÃO</span><span>MÉTODO SEM CONSTIPAÇÃO</span><span>MÉTODO SEM CONSTIPAÇÃO</span>
+    </div>
+  </div>
+
+  <!-- ETAPA 3 – TRÊS PILARES -->
+  <section class="step3">
+    <div class="step3-inner">
+      <h2 class="step3-title">
+        A grande diferença do <span class="highlight">MÉTODO SEM CONSTIPAÇÃO</span> está em três pilares:
+      </h2>
+
+      <p class="step3-subtitle">
+        Enquanto outros métodos apenas aliviam os sintomas por algumas horas, o Método Sem Constipação atua na causa do problema,
+        reorganiza seu intestino e recupera seu ritmo natural de forma leve, segura e acessível.
+      </p>
+
+      <div class="step3-pillars">
+        <div class="pillar">
+          <div class="pillar-icon">✔</div>
+          <h3 class="pillar-title">Natural e Seguro</h3>
+          <p class="pillar-text">
+            Nada de fórmulas mágicas ou produtos agressivos. Você aprende estratégias naturais que respeitam o funcionamento do seu corpo.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <div class="pillar-icon">✔</div>
+          <h3 class="pillar-title">Sem Sofrimento</h3>
+          <p class="pillar-text">
+            Chega de depender de laxantes, ficar horas no banheiro ou sentir dores e cólicas constantes.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <div class="pillar-icon">✔</div>
+          <h3 class="pillar-title">Passo a Passo Simples</h3>
+          <p class="pillar-text">
+            Qualquer pessoa consegue seguir. É só aplicar as etapas e permitir que seu corpo volte ao equilíbrio.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARD DE COMPRA -->
+  <section id="oferta" class="offer-wrapper" style="
+  display:flex;
+  justify-content:center;
+  padding:40px 16px;
+  background:#000;
+">
+  <div class="offer-card--principal">
+    <div style="font-family:Poppins,system-ui,sans-serif; margin-bottom:10px;">
+      <div style="font-size:22px; font-weight:800; color:#ffffff; text-transform:uppercase;">
+        OFERTA ESPECIAL
+      </div>
+      <div style="
+        margin-top:8px;
+        font-size:15px;
+        font-weight:600;
+        text-transform:uppercase;
+        background:#ff4d1c;
+        color:#fff;
+        display:inline-block;
+        padding:6px 18px;
+        border-radius:999px;
+      ">
+        PROMOÇÃO ENCERRA EM <br>POUCOS MINUTOS
+      </div>
+    </div>
+
+    <div style="
+      margin-top:22px;
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+      font-family:Poppins,system-ui,sans-serif;
+    ">
+      <div style="
+        flex:1 1 180px;
+        max-width:260px;
+        background:#000;
+        border-radius:20px;
+        border:3px solid #ff3b1f;
+        padding:22px 10px 18px;
+      ">
+        <div id="offer-minutes" style="font-size:64px;font-weight:700;">
+          10
+        </div>
+        <div style="margin-top:6px; font-size:16px;">
+          Minutos
+        </div>
+      </div>
+
+      <div style="
+        flex:1 1 180px;
+        max-width:260px;
+        background:#000;
+        border-radius:20px;
+        border:3px solid #ff3b1f;
+        padding:22px 10px 18px;
+      ">
+        <div id="offer-seconds" style="font-size:64px;font-weight:700;">
+          00
+        </div>
+        <div style="margin-top:6px; font-size:16px;">
+          Segundos
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:26px; font-family:Poppins,system-ui,sans-serif;">
+      <div style="font-size:14px; font-weight:600; text-transform:uppercase; color:#ffffff;">
+        DE R$ 87,90 POR APENAS
+      </div>
+      <div style="
+        margin-top:10px;
+        font-size:56px;
+        font-weight:800;
+        color:#00ff33;
+      ">
+        R$49,90
+      </div>
+    </div>
+
+    <div style="margin-top:24px;">
+      <a href="#"
+         class="offer-cta-btn">
+        APROVEITE AGORA
+      </a>
+    </div>
+
+    <div style="
+      margin-top:22px;
+      display:flex;
+      justify-content:center;
+    ">
+      <img src="images/pagamentos.webp"
+           alt="Compra segura, satisfação garantida, privacidade protegida"
+           style="max-width:260px; width:100%; opacity:0.9;">
+    </div>
+  </div>
+</section>
+
+  <!-- SCRIPT: INICIAR CONTADOR EM 10 MINUTOS -->
+  <script>
+    startOfferCountdown(10 * 60, 'offer-minutes', 'offer-seconds');
+  </script>
+
+  <!-- ETAPA 6 – GARANTIA -->
+  <section class="step6">
+    <div class="step6-inner">
+
+      <div class="guarantee-content">
+        <h2 class="guarantee-title">
+          Satisfação garantida ou seu <br><span class="highlight">dinheiro de volta</span>
+        </h2>
+
+        <p class="guarantee-text">
+          Você tem 30 dias para aplicar o conteúdo.
+          Se não sentir melhora no funcionamento intestinal, menos desconforto e mais regularidade — basta enviar uma mensagem
+          e devolvemos 100% do seu investimento. Você não corre nenhum risco.
+        </p>
+
+        <div class="guarantee-payments guarantee-payments--desktop"></div>
+      </div>
+
+      <div class="guarantee-image">
+        <img src="images/garantia.png" alt="Selo de garantia MÉTODO SEM CONSTIPAÇÃO">
+        <div class="guarantee-payments guarantee-payments--mobile"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ETAPA 7 – FAQ -->
+  <section class="faq-section">
+    <div class="faq-inner">
+      <h2 class="faq-title">Dúvidas Mais Comuns</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <div class="faq-left">
+              <span class="faq-icon">▸</span>
+              <span class="faq-text">Formas de pagamento:</span>
+            </div>
+          </div>
+          <div class="faq-answer">
+            Cartão, Pix ou boleto, tudo em uma plataforma totalmente segura.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <div class="faq-left">
+              <span class="faq-icon">▸</span>
+              <span class="faq-text">Como recebo o ebook?</span>
+            </div>
+          </div>
+          <div class="faq-answer">
+            O acesso é enviado imediatamente para o seu e-mail após a confirmação do pagamento.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <div class="faq-left">
+              <span class="faq-icon">▸</span>
+              <span class="faq-text">Por quanto tempo tenho acesso?</span>
+            </div>
+          </div>
+          <div class="faq-answer">
+            Acesso vitalício ao ebook — é seu para sempre.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <div class="faq-left">
+              <span class="faq-icon">▸</span>
+              <span class="faq-text">Em quanto tempo verei resultados?</span>
+            </div>
+          </div>
+          <div class="faq-answer">
+            A maioria das pessoas percebe melhora nos primeiros dias, conforme aplica as orientações.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <div class="faq-left">
+              <span class="faq-icon">▸</span>
+              <span class="faq-text">A plataforma é segura?</span>
+            </div>
+          </div>
+          <div class="faq-answer">
+            Totalmente. Seus dados ficam protegidos por criptografia.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 <span>MÉTODO SEM CONSTIPAÇÃO</span>. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Acordeão das dúvidas
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.faq-question').forEach(function (q) {
+        q.addEventListener('click', function () {
+          var item = this.parentElement;
+          item.classList.toggle('open');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
